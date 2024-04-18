@@ -28,13 +28,13 @@ const Step1: React.FC<Step1Props> = ({ onNext, onChange }) => {
   };
 
   return (
-    <div>
+    <div className="flex flex-col gap-4">
       {/* Form inputs for email, password, and re-enter password */}
-      <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} />
-      <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} />
-      <input type="password" name="reEnterPassword" placeholder="Re-enter Password" value={formData.reEnterPassword} onChange={handleChange} />
+      <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} className="border border-black rounded outline-none px-4 py-2"/>
+      <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} className="border border-black rounded outline-none px-4 py-2" />
+      <input type="password" name="reEnterPassword" placeholder="Re-enter Password" value={formData.reEnterPassword} onChange={handleChange} className="border border-black rounded outline-none px-4 py-2"/>
        {/* Button to proceed to the next step in the registration flow */}
-      <button onClick={onNext}>Get Started</button>
+      <button onClick={onNext} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Get Started</button>
     </div>
   );
 };
