@@ -36,7 +36,7 @@ const RegistrationFlow = () => {
       {/* Render Step1 component if 'step' is 1 */}
       {step === 1 && <Step1 onNext={handleNextStep} onChange={handleFormDataChange} />}
       {/* Render Step2 component if 'step' is 2 */}
-      {step === 2 && <Step2 onNext={handleNextStep} onChange={handleFormDataChange} />}
+      {step === 2 && <Step2 onNext={handleNextStep} onPrevious={handlePreviousStep}  onChange={handleFormDataChange} />}
       {/* Render Step3 component if 'step' is 3 */}
       {step === 3 && <Step3 onPrevious={handlePreviousStep} />}
     </div>
